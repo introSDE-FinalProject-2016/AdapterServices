@@ -27,7 +27,6 @@ public class PersonCollectionResource {
 	 * Returns the list all pictures from Instagram API 
 	 * 
 	 * @return
-	 * @throws Exception
 	 */
 	@GET
 	@Path("/instagram-pictures")
@@ -170,14 +169,14 @@ public class PersonCollectionResource {
 					"http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
 			/*
 			 * POST: method=getQuote&key=457653&format=xml&lang=en response:
-			 * <forismatic> <quote> <quoteText>Brevity — the soul of wit</quoteText>
-			 * <quoteAuthor></quoteAuthor> <senderName>name or nickname of the quote
-			 * sender</senderName> <senderLink>email or website address of the quote
-			 * sender</senderLink> </quote> </forismatic>
-			 */
+			 <forismatic> <quote> <quoteText>Brevity the soul of wit</quoteText>
+			 <quoteAuthor></quoteAuthor> <senderName>name or nickname of the quote
+			 sender</senderName> <senderLink>email or website address of the quote
+			 sender</senderLink> </quote> </forismatic>
+			 
 			// String quotedesign_endpoint =
 			// "http://quotesondesign.com/api/3.0/api-3.0.json";
-			/*
+			
 			 * { "id":1387, "quote":"The space between an idea and a concept is your
 			 * lips. If you can't say it out loud you can't do it.",
 			 * "author":"Nick Longo",
