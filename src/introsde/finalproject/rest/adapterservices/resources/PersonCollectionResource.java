@@ -23,8 +23,8 @@ import org.json.*;
 public class PersonCollectionResource {
 
 	/**
-	 * Request #1: GET/person/instagram-img 
-	 * Returns the list all images from Instagram API 
+	 * Request #1: GET /person/instagram-pictures 
+	 * Returns the list all pictures from Instagram API 
 	 * 
 	 * @return
 	 * @throws Exception
@@ -149,6 +149,13 @@ public class PersonCollectionResource {
 
 	}
 
+	/**
+	 * Request #1: GET /person/motivation-quote 
+	 * Returns the list all motivational quotes from Forismatic API 
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
 	@GET
 	@Path("/motivation-quote")
 	@Produces(MediaType.APPLICATION_JSON)
