@@ -119,8 +119,8 @@
 
 
 	<target name="start" depends="install">
-		<echo message="app start introsde.finalproject.rest.App in ${build.dir}" />
-		<java classname="introsde.finalproject.rest.App" classpath="${build.dir}" fork="true">
+		<echo message="app start introsde.finalproject.rest.adapterservices.App in ${build.dir}" />
+		<java classname="introsde.finalproject.rest.adapterservices.App" classpath="${build.dir}" fork="true">
 			<arg value="$JAVA_OPTS  -cp" />
 			<classpath>
 				<path location="build" />
