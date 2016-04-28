@@ -11,10 +11,11 @@ import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 public class App {
+	
 	public static void main(String[] args) throws IllegalArgumentException,
 			IOException, URISyntaxException {
 		String protocol = "http://";
-		String port_value = "5700";  //5700 
+		String port_value = "5700";
 		if (String.valueOf(System.getenv("PORT")) != "null") {
 			port_value = String.valueOf(System.getenv("PORT"));
 		}
@@ -36,4 +37,5 @@ public class App {
 		System.out.println("Starting sdelab REST services...");
 		return new MyApplicationConfig();
 	}
+	
 }
