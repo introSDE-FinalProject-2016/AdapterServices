@@ -98,26 +98,6 @@
 		</copy>
 	</target>
 
-	<target name="compile" depends="clean, init">
-		<echo message="Compile target has been called" />
-		<javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="lib.path.id" includeAntRuntime="false">
-		</javac>
-		<copy todir="${build.dir}" overwrite="true">
-			<fileset dir="${src.dir}">
-				<include name="*.xml" />
-				<include name="**/*.xml" />
-			</fileset>
-		</copy>
-		<copy todir="${build.dir}" overwrite="true">
-			<fileset dir="${webcontent.dir}">
-				<include name="*.xml" />
-				<include name="**/*.xml" />
-			</fileset>
-		</copy>
-	</target>
-
-
-
 	<target name="start" depends="install">
 		<echo message="app start introsde.finalproject.rest.adapterservices.App in ${build.dir}" />
 		<java classname="introsde.finalproject.rest.adapterservices.App" classpath="${build.dir}" fork="true">
@@ -131,7 +111,6 @@
 			</classpath>
 		</java>
 	</target>
-
 
 	<!-- Connecting client to my server -->
 	<target name="execute.client.myserver" depends="install">
@@ -164,7 +143,6 @@
 		</java>
 	</target>
 
-
 	<!-- Executing the client connecting to my server with media.type json -->
 	<target name="execute.client.myserver.json">
 		<java classname="ehealth.client.TestClient" classpath="build">
@@ -179,8 +157,6 @@
 			</classpath>
 		</java>
 	</target>
-
-
 
 	<!-- Start client for the assignment calling the friend server -->
 	<target name="execute.client" depends="install">
@@ -197,8 +173,6 @@
 
 	</target>
 	<!-- end client for the assignment calling the friend server -->
-
-
 
 	<!-- Executing the client connecting to friend server with media.type xml -->
 	<target name="execute.client.friend.xml">
@@ -230,9 +204,6 @@
 		</java>
 	</target>
 
-
-
-
 	<!-- make sure you have created first the WebContent folder, including a META-INF folder, WEB-INF/web.xml file and WEB-INF/lib folder -->
 	<target name="create.war" depends="install">
 		<war destfile="sdelab06.war" webxml="${web.dir}/WebContent/WEB-INF/web.xml">
@@ -242,8 +213,6 @@
 			<classes dir="${build.dir}" />
 		</war>
 	</target>
-
-
 
 	<!-- Generate javadocs for current project into ${doc.dir} -->
 	<target name="generate.doc" depends="init" description="generate documentation">
