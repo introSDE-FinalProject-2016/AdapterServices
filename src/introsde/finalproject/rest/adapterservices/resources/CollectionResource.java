@@ -33,8 +33,9 @@ public class CollectionResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getInstagramPictures(){
 		try {
+			System.out.println("getInstagramPictures(): Reading the list all pictures from Instagram API...");
 			
-			String path = "/person/instagram-pictures";
+			String path = "/adapter-service/instagram-pictures";
 			String result_request_1 = "ERROR";
 			String mediaType = MediaType.APPLICATION_JSON;
 			
@@ -150,7 +151,7 @@ public class CollectionResource {
 
 	/**
 	 * Request #2: GET /person/motivation-quote 
-	 * Returns one motivational quote from Forismatic API 
+	 * Returns a motivational quote from Forismatic API 
 	 * 
 	 * @return
 	 * @throws Exception
@@ -160,8 +161,9 @@ public class CollectionResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getMotivationQuote() throws Exception {
 		try {
+			System.out.println("getMotivationQuote(): Reading a motivational quote from Forismatic API...");
 			
-			String path = "/person/motivation-quote";
+			String path = "/adapter-service/motivation-quote";
 			String result_request_2 = "ERROR";
 			String mediaType = MediaType.APPLICATION_JSON;
 			
