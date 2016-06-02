@@ -52,7 +52,7 @@ public class CollectionResource {
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
 			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
-					+ hashTags[random_hashtag] + "/media/recent?access_token="
+					+ hashTags[random_hashtag] + "/media/recent?random=true&access_token="
 					+ ACCESS_TOKEN;
 
 			String jsonResponse = "";
