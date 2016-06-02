@@ -41,13 +41,14 @@ public class CollectionResource {
 			
 			//String[] hashTags = { "pioneeradventures", "vacationwolf",
 				//	"lonelyplanet", "mysecretlondon", "earthofficial" };
-			 String[] hashTags = {"fitmotivation", "nordicwalking" ,
-					 				"nordicwalkingwa" , "fitnessquotes_"};
-			// String[] hashTags = {"happiness", "happy", "smile", "motivation",
-			// "nevergiveup"};
+			 //String[] hashTags = {"fitmotivation", "nordicwalking" ,
+				//	 				"nordicwalkingwa" , "fitnessquotes_"};
+			String[] hashTags = {"happiness", "happy", "smile", "motivation",
+			"nevergiveup"};
 
 			final String ACCESS_TOKEN = "2304108306.1677ed0.1d3d7bec2ce04de4a8da1a37f0f62eaa";
-
+			//2304108306.1677ed0.1d3d7bec2ce04de4a8da1a37f0f62eaa
+			 
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
 			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
