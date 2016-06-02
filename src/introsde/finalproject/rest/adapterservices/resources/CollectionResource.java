@@ -46,7 +46,8 @@ public class CollectionResource {
 			String[] hashTags = {"happiness", "happy", "smile", "motivation",
 			"nevergiveup"};
 
-			final String ACCESS_TOKEN = "3293611795.1677ed0.20a2cdffe5454fe9952f1c6d81760cd5";
+			final String ACCESS_TOKEN = "2304108306.1677ed0.1d3d7bec2ce04de4a8da1a37f0f62eaa";
+			//"3293611795.1677ed0.20a2cdffe5454fe9952f1c6d81760cd5";
 			//2304108306.1677ed0.1d3d7bec2ce04de4a8da1a37f0f62eaa
 			 
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
