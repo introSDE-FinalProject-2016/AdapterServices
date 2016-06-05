@@ -46,15 +46,11 @@ public class CollectionResource {
 			String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
 
 			final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
-			//"2304108306.1677ed0.1d3d7bec2ce04de4a8da1a37f0f62eaa"; --> oldAccessToken
 			 
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
-			/*String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 					+ hashTags[random_hashtag] + "/media/recent?random=true&access_token="
-					+ ACCESS_TOKEN;*/
-			String instagram_endpoint = "https://api.instagram.com/v1/users/"
-					+ "yuly.sanchez29" + "/media/recent?access_token="
 					+ ACCESS_TOKEN;
 			
 			String jsonResponse = "";
