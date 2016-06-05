@@ -41,9 +41,9 @@ public class CollectionResource {
 			
 			//String[] hashTags = { "pioneeradventures", "vacationwolf",
 				//	"lonelyplanet", "mysecretlondon", "earthofficial" };
-			String[] hashTags = {"fitmotivation", "nordicwalking" ,
-				 				"nordicwalkingwa" , "fitnessquotes_"};
-			//String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
+			//String[] hashTags = {"fitmotivation", "nordicwalking" ,
+				// 				"nordicwalkingwa" , "fitnessquotes_"};
+			String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
 
 			final String ACCESS_TOKEN = "2304108306.1677ed0.a13ec1fd8d414523b825f8dbb4a61098";
 			//"2304108306.1677ed0.1d3d7bec2ce04de4a8da1a37f0f62eaa"; --> oldAccessToken
