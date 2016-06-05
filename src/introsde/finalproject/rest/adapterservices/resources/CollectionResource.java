@@ -57,7 +57,12 @@ public class CollectionResource {
 			String jsonResponse = "";
 
 			HttpClient client = new DefaultHttpClient();
+			
+			System.out.println("EndPoint: " + instagram_endpoint);
+			
 			HttpGet request = new HttpGet(instagram_endpoint);
+			System.out.println("URI: " + request.getURI());
+			
 			HttpResponse response = client.execute(request);
 			
 			BufferedReader rd = new BufferedReader(new InputStreamReader(
@@ -70,7 +75,10 @@ public class CollectionResource {
 			}
 
 			JSONObject o = new JSONObject(result.toString());
-
+			
+			System.out.println("Result: " + o.toString());
+			System.out.println("Status: " + response.getStatusLine().getStatusCode());
+			
 			if (response.getStatusLine().getStatusCode() == 200) {
 				
 				result_request_1 = "OK";
