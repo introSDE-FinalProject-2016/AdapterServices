@@ -49,17 +49,17 @@ public class CollectionResource {
 			 
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
-			/* Access Token
-			 * final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
-			 * String instagram_endpoint = "https://api.instagram.com/v1/tags/"
-					+ hashTags[random_hashtag] + "/media/recent?random=true&access_token="
-					+ ACCESS_TOKEN;*/
+			/* Access Token*/
+			final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
+			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+					+ hashTags[random_hashtag] + "/media/recent?access_token="
+					+ ACCESS_TOKEN;
 			
 			/* Client ID*/
-			final String CLIENT_ID = "d5beb397765c44c19e138ae686e9069c";
+			/*final String CLIENT_ID = "d5beb397765c44c19e138ae686e9069c";
 			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 					+ hashTags[random_hashtag] + "/media/recent?client_id="
-					+ CLIENT_ID;
+					+ CLIENT_ID;*/
 			
 			String jsonResponse = "";
 
