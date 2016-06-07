@@ -45,13 +45,21 @@ public class CollectionResource {
 				// 				"nordicwalkingwa" , "fitnessquotes_"};
 			String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
 
-			final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
+			
 			 
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
-			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+			/* Access Token
+			 * final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
+			 * String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 					+ hashTags[random_hashtag] + "/media/recent?random=true&access_token="
-					+ ACCESS_TOKEN;
+					+ ACCESS_TOKEN;*/
+			
+			/* Client ID*/
+			final String CLIENT_ID = "d5beb397765c44c19e138ae686e9069c";
+			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+					+ hashTags[random_hashtag] + "/media/recent?client_id="
+					+ CLIENT_ID;
 			
 			String jsonResponse = "";
 
