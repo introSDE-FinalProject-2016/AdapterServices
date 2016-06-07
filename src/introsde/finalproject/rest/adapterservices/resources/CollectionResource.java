@@ -50,7 +50,8 @@ public class CollectionResource {
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
 			/* Access Token*/
-			final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
+			//final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
+			final String ACCESS_TOKEN =  "2304108306.7667b0a.576c875723fc4bcf9c551c3bd7fccc54";
 			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 					+ hashTags[random_hashtag] + "/media/recent?access_token="
 					+ ACCESS_TOKEN;
