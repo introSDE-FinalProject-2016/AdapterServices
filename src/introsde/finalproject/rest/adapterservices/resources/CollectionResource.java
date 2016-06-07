@@ -52,7 +52,7 @@ public class CollectionResource {
 			/* Access Token*/
 			final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
 			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
-					+ hashTags[random_hashtag] + "/media/recent?access_token="
+					+ hashTags[random_hashtag] + "/media/recent/?access_token="
 					+ ACCESS_TOKEN;
 			
 			/* Client ID*/
