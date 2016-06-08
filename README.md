@@ -4,7 +4,7 @@ It extracts and gets data like pictures and motivation quotes via REST APIs with
 
 [API Documentation](http://docs.adapterservices.apiary.io/#)  
 [URL Client](https://github.com/introSDE-FinalProject-2016/Telegram-Bot)  
-[URL Server (heroku)](https://stark-island-39603.herokuapp.com/sdelab/) 
+[URL Server (heroku)](https://stark-island-39603.herokuapp.com/sdelab/adapter-service) 
 
 
 ###Install
