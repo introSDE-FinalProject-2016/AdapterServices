@@ -39,28 +39,23 @@ public class CollectionResource {
 			String result_request_1 = "ERROR";
 			String mediaType = MediaType.APPLICATION_JSON;
 			
-			//String[] hashTags = { "pioneeradventures", "vacationwolf",
-				//	"lonelyplanet", "mysecretlondon", "earthofficial" };
-			//String[] hashTags = {"fitmotivation", "nordicwalking" ,
-				// 				"nordicwalkingwa" , "fitnessquotes_"};
 			String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
-
-			
-			 
 			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
 			/* Access Token*/
-			//final String ACCESS_TOKEN = "2304108306.1677ed0.8afdf8683fc34402bfbd05bdf285c2d3";
 			final String ACCESS_TOKEN =  "2304108306.7667b0a.576c875723fc4bcf9c551c3bd7fccc54";
-			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
-					+ hashTags[random_hashtag] + "/media/recent?access_token="
-					+ ACCESS_TOKEN;
+			//final String USER_ID = "2304108306";
 			
-			/* Client ID*/
-			/*final String CLIENT_ID = "d5beb397765c44c19e138ae686e9069c";
-			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
-					+ hashTags[random_hashtag] + "/media/recent?client_id="
-					+ CLIENT_ID;*/
+			//1. https://api.instagram.com/v1/users/{user-id}/media/recent/?access_token=ACCESS-TOKEN
+			//2. https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN
+			//3. https://api.instagram.com/v1/tags/search?q=snowy&access_token=ACCESS-TOKEN
+			
+			String instagram_endpoint = "https://api.instagram.com/v1/users/self/media/recent?access_token=" + ACCESS_TOKEN;
+			
+			/*String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+					+ hashTags[random_hashtag] + "/media/recent?access_token="
+					+ ACCESS_TOKEN;*/
+			
 			
 			String jsonResponse = "";
 
