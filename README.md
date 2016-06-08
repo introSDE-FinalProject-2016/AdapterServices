@@ -1,6 +1,6 @@
 # AdapterServices
 
-The Adapter Service is a RESTful Web Service. This layer is in charge of comunication with third party services.  
+The Adapter Service is a RESTful Web Service. This module is in charge of comunication with third party services.  
 It extracts and gets data like pictures and motivation quotes via REST APIs with [Instagram](https://www.instagram.com/developer/) for pictures and [Forismatic](http://forismatic.com/en/) for motivational quotes.
 
 [API Documentation](http://docs.adapterservices.apiary.io/#)  
