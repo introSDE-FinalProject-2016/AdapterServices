@@ -120,7 +120,7 @@ public class CollectionResource {
 						//String random_tag = hashTags[random_hashtag];
 
 						jsonResponse += "\"id\": \"" + id
-								+ "\"";
+								+ "\",";
 						
 						jsonResponse += "\"standard_resolution_url\": \""
 								+ standard_resolution_url + "\",";
