@@ -50,11 +50,11 @@ public class CollectionResource {
 			//2. https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN
 			//3. https://api.instagram.com/v1/tags/search?q=snowy&access_token=ACCESS-TOKEN
 			
-			String instagram_endpoint = "https://api.instagram.com/v1/users/self/media/recent?access_token=" + ACCESS_TOKEN;
+			//String instagram_endpoint = "https://api.instagram.com/v1/users/self/media/recent?access_token=" + ACCESS_TOKEN;
 			
-			/*String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 					+ hashTags[random_hashtag] + "/media/recent?access_token="
-					+ ACCESS_TOKEN;*/
+					+ ACCESS_TOKEN;
 			
 			
 			String jsonResponse = "";
