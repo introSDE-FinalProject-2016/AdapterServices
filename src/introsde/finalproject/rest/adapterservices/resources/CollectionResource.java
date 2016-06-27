@@ -39,8 +39,8 @@ public class CollectionResource {
 			String result_request_1 = "ERROR";
 			String mediaType = MediaType.APPLICATION_JSON;
 			
-			String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
-			int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
+			//String[] hashTags = {"happiness", "happy", "smile", "motivation","nevergiveup"};
+			//int random_hashtag = 0 + (int) (Math.random() * (hashTags.length - 1));
 
 			/* Access Token*/
 			final String ACCESS_TOKEN =  "2304108306.7667b0a.576c875723fc4bcf9c551c3bd7fccc54";
@@ -50,12 +50,11 @@ public class CollectionResource {
 			//2. https://api.instagram.com/v1/users/self/media/recent/?access_token=ACCESS-TOKEN
 			//3. https://api.instagram.com/v1/tags/search?q=snowy&access_token=ACCESS-TOKEN
 			
-			//String instagram_endpoint = "https://api.instagram.com/v1/users/self/media/recent?access_token=" + ACCESS_TOKEN;
-			
-			String instagram_endpoint = "https://api.instagram.com/v1/tags/"
+			/*String instagram_endpoint = "https://api.instagram.com/v1/tags/"
 					+ hashTags[random_hashtag] + "/media/recent?access_token="
-					+ ACCESS_TOKEN;
+					+ ACCESS_TOKEN;*/
 			
+			String instagram_endpoint = "https://api.instagram.com/v1/users/self/media/recent?access_token=" + ACCESS_TOKEN;
 			
 			String jsonResponse = "";
 
@@ -89,6 +88,7 @@ public class CollectionResource {
 				jsonResponse += "{\"status\": \"OK\",";
 
 				JSONArray arr = o.getJSONArray("data");
+				
 				int responseCount = arr.length();
 				jsonResponse += "\"responseCount\": " + responseCount + ",";
 
@@ -109,23 +109,26 @@ public class CollectionResource {
 
 						String thumbnail = arr.getJSONObject(i)
 								.getJSONObject("images")
-								.getJSONObject("thumbnail").getString("url");
+								.getJSONObject("thumbnail")
+								.getString("url");
+						
+						int likes = arr.getJSONObject(i)
+								.getJSONObject("likes")
+								.getInt("count");
+						
+						String id = arr.getJSONObject(i).getString("id");
+						//String random_tag = hashTags[random_hashtag];
 
-						String link_instagram = arr.getJSONObject(i).getString(
-								"link");
-
-						String random_tag = hashTags[random_hashtag];
-
+						jsonResponse += "\"id\": \"" + id
+								+ "\"";
+						
 						jsonResponse += "\"standard_resolution_url\": \""
 								+ standard_resolution_url + "\",";
 						
 						jsonResponse += "\"thumbUrl\": \"" + thumbnail + "\",";
 
-						jsonResponse += "\"link_instagram\": \""
-								+ link_instagram + "\",";
-
-						jsonResponse += "\"random_tag\": \"" + random_tag
-								+ "\"";
+						jsonResponse += "\"likes\": \""
+								+ likes + "\"";
 
 						if (i == arr.length() - 1) {
 							jsonResponse += "}";
